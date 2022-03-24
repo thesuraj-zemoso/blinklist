@@ -161,7 +161,7 @@ function App() {
             element={
               <>
                 <KeyIdeas/>
-                <BookDetailsGrid btn={btn} handleFinish={handleFinish}/>
+                <BookDetailsGrid btn={btn} handleFinish={handleFinish} handleReadAgain={handleReadAgain}/>
                 <BookDetailsTabs/>
               </>
             }>

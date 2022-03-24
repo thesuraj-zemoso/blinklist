@@ -10,7 +10,8 @@ const useStyle = {
     fontSize: "16px",
     fontWeight: "500",
     "&:hover": {
-      backgroundColor: "#F5F5F5",
+      backgroundColor: "#0365F2",
+      color: "#FFFFFF",
     },
   },
   authorNameTypography: {
@@ -153,7 +154,7 @@ const useStyle = {
     fontWeight: "400",
     color: "#03314B",
     marginTop: "60px",
-    marginLeft: "265px",
+    marginLeft: "495px",
   },
   myLibraryHead: {
     marginTop: "59px",
@@ -205,13 +206,13 @@ const useStyle = {
     color: "#6D787E",
   },
   bookDetalisTabsOne: {
-    marginLeft: "243px",
+    marginLeft: "493px",
     marginTop: "40px",
   },
   bookDetalisTabsTwo: {
     padding: "0px",
     marginTop: "20px",
-    marginLeft: "243px",
+    marginLeft: "493px",
   },
   bookDetalisTabsTypo: {
     fontSize: "16px",
@@ -350,6 +351,7 @@ const useStyle = {
     marginLeft: "230px",
     marginTop: "60px",
   },
+
 };
 
 export const theme = createTheme({

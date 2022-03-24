@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export const AddToLibraryButton = () => {
   return (
-      <Link to="/bookdetails">
+      <Link to="/bookdetails" style={{ textDecoration: "none" }}>
       <Button startIcon={<AddIcon/>}
       sx={useStyle.addToLibBtn}
       data-testid="AddToLibBtn">

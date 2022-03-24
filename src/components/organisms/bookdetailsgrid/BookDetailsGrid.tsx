@@ -11,6 +11,7 @@ import ReadNow from "../../atoms/bookPageDetails/bookOptions/readButton/readbutt
 import { ReadTime } from "../../molecules/read-time/readTime";
 
 interface Handle {
+  handleReadAgain: (item: string) => void;
   handleFinish: (item: string) => void;
   btn: boolean;
 }
@@ -39,7 +40,11 @@ export const BookDetailsGrid = (props: Handle) => {
                 <Grid item sx={useStyle.bookDetailsGrid}>
                   <Grid container columnSpacing="32px">
                     <Grid item>
-                      <ReadNow />
+                      <ReadNow
+                        btn={props.btn}
+                        bookName="Beyond Entrepreneurship 2.0"
+                        handleRead={props.handleReadAgain}
+                      />
                     </Grid>
                     <Grid item>
                       <FinishReading

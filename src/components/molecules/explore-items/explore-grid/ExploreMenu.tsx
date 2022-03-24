@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Buttons from "../../../atoms/explore-item/Buttons";
-import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketOutlined";
+// import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketOutlined";
+// import RocketLaunchOutlinedIcon from "./RocketLaunchOutlinedIcon";
 import ScienceOutlinedIcon from "@mui/icons-material/ScienceOutlined";
 import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
 import AccountBalanceOutlinedIcon from "@mui/icons-material/AccountBalanceOutlined";
@@ -19,12 +20,13 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import { Divider, Grid } from "@mui/material";
-
+import { IconGeneric } from "./IconGeneric";
+import { ReactComponent as RocketLaunchOutlinedIcon } from "./RocketLaunchOutlinedIcon.svg";
 import useStyle from "../../../../Theme";
 import { ExploreMenuHead } from "../explore-grid-head/ExploreMenuHead";
 
 const list = [
-    { name: "Entrepreneurship", comp: <RocketLaunchOutlinedIcon /> },
+    { name: "Entrepreneurship", comp: <IconGeneric icon={RocketLaunchOutlinedIcon} /> },
     { name: "Science", comp: <ScienceOutlinedIcon /> },
     { name: "Economics", comp: <FiberSmartRecordOutlinedIcon /> },
     { name: "Corporate Culture", comp: <BusinessCenterOutlinedIcon /> },
@@ -44,6 +46,44 @@ const list = [
     { name: "Education", comp: <SchoolOutlinedIcon /> },
   ];
 
+  // interface Handle{
+  //   handleChange:()=>void;
+  
+  // }
+  
+  // export const ExploreMenu = (props:Handle) => {
+  //   let count=1;
+  //   const component = list.map((e) => ({
+  //    id:count++,comp: <Buttons handleChange={props.handleChange} itemname={e.name} itemicon={e.comp}/>
+  //  } ));
+  //   return (
+  //     <Box
+  //       zIndex="1"
+  //       sx={useStyle.exploreBoxOne}
+  //     >
+  //       <Box
+  //          sx={useStyle.exploreBoxTwo}
+  //       >
+  //         <Box width="1100px">
+  //           <ExploreMenuHead/>
+  //           <Divider sx={useStyle.exploreDiv}  style={{border:"1px solid #042330"}}/>
+  //           <Grid container rowSpacing="18px" sx={useStyle.exploreGrid} >
+  //             {component.map((e) => (
+  //               <Grid item xs={4} key={e.id}>
+  //                 {e.comp}
+  //               </Grid>
+  //             ))}
+  //           </Grid>
+  //         </Box>
+  //       </Box>
+  //       <Box
+  //         sx={useStyle.exploreBoxThree}
+  //       ></Box>
+  //     </Box>
+  //   );
+  // };
+  
+
   interface Handle{
     handleChange:()=>void;
   
@@ -54,6 +94,7 @@ const list = [
     const component = list.map((e) => ({
      id:count++,comp: <Buttons handleChange={props.handleChange} itemname={e.name} itemicon={e.comp}/>
    } ));
+      // const classes=customStyle();
     return (
       <Box
         zIndex="1"
@@ -63,8 +104,8 @@ const list = [
            sx={useStyle.exploreBoxTwo}
         >
           <Box width="1100px">
-            <ExploreMenuHead/>
-            <Divider sx={useStyle.exploreDiv}  style={{border:"1px solid #042330"}}/>
+            <ExploreMenuHead />
+            <Divider sx={useStyle.exploreDiv}  />
             <Grid container rowSpacing="18px" sx={useStyle.exploreGrid} >
               {component.map((e) => (
                 <Grid item xs={4} key={e.id}>
@@ -80,4 +121,4 @@ const list = [
       </Box>
     );
   };
-  
+  // export default ExploreMenu;

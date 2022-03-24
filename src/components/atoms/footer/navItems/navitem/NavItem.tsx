@@ -9,6 +9,7 @@ const NavItem = (props: NavItemName) => {
       <Typography
         variant="body2"
         sx={useStyle.navItem}
+        data-testid="NavItem"
       >
         {props.name}
       </Typography>

@@ -11,6 +11,7 @@ const NavHead = (props: NavHeadName) => {
         <Typography
         variant = "body1"
         sx={useStyle.navHead}
+        data-testid="NavHead"
         >
             {props.name}
         </Typography>

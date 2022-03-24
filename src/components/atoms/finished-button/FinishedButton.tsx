@@ -13,6 +13,7 @@ const FinishedButton = (props: Handle) => {
     sx={useStyle.readAgain}
     onClick={()=>{props.handleFinish(props.name)}}
     component="button"
+    data-testid="finishedButton"
     >
         Finished
     </Button>
